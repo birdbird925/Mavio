@@ -1,0 +1,60 @@
+.hero-slider-wrapper
+    padding: 0
+
+    .hero-slider
+        letter-spacing: 2px
+
+        li
+            min-height: calc(90vh - 90px)
+            background:
+                color: transparent
+                size: cover
+                position: center
+                repeat: no-repeat
+
+            .col-xs-12
+                position: relative
+                height: calc(90vh - 90px)
+
+                .text-wrapper
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+
+                    .title
+                        font-family: 'Lato', sans-serif
+                        font-weight: 900
+                        padding: 5px 0
+
+                    .caption
+                        font-family: 'Roboto', sans-serif
+                        font-weight: 100
+                        font-size: 12px
+
+                .text-wrapper.text-center
+                    left: 50%
+                    transform: translate3d(-50%, -50%, 0)
+                    text-align: center
+
+                .text-wrapper.text-right
+                    right: 0
+
+
+        video
+            -webkit-transform: translateX(-50%) translateY(-50%)
+            transform: translateX(-50%) translateY(-50%)
+            position: absolute
+            z-index: -1
+            top: 50%
+            left: 50%
+            height: calc(90vh -90px)
+
+
+.hero-image
+    min-height: calc(90vh - 90px)
+    width: 100%
+    background:
+        image: url(/demo/hero-image.png)
+        size: cover
+        position: center
+        repeat: no-repeat

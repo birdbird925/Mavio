@@ -1,0 +1,206 @@
+.cart-container
+    font-size: 16px
+
+    .empty-cart
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate3d(-50%,-50%,0)
+        text-align: center
+        letter-spacing: 1px
+
+        .title
+            font-weight: 900
+            font-size: 20px
+            margin-bottom: 20px
+            text-transform: uppercase
+
+        .caption
+            font-size: 16px
+
+    table
+        width: 100%
+        border-top: 1px solid $line-color
+        border-bottom: 1px solid $line-color
+
+        tr
+            &:first-child
+                td
+                    padding-top: 20px
+
+        td
+            width: 50%
+            padding-bottom: 20px
+
+        .cart-info
+            text-align: center
+            padding-left: 30px
+
+        .product-name
+            display: none
+
+        img
+            width: 100%
+
+        .quantity-control
+            position: relative
+            width: 80%
+            padding: 6px 20px
+            margin: 15px auto
+
+            .control
+                position: absolute
+                font-size: 24px
+                cursor: pointer
+                top: 0
+                left: 50%
+
+                &:hover
+                    color: $second-text
+
+            .minus
+                transform: translateX(-50px)
+
+            .plus
+                transform: translateX(50px)
+                top: 2px
+
+            .error
+                position: absolute
+                top: -85px
+                left: 50%
+                transform: translate3d(-50%, 0, 0)
+                color: red
+                white-space: nowrap
+
+        .remove-control
+            cursor: pointer
+            text-transform: uppercase
+            font-size: 12px
+
+            &:hover
+                color: $second-text
+
+    .cart-footer
+        .footer-row
+            margin-top: 10px
+
+            &:first-child
+                margin-top: 20px
+
+        .left
+            display: inline-block
+
+        .right
+            float: right
+
+        a
+            text-align: center
+            border: 2px solid $line-color
+            margin: 20px auto
+            padding: 14px
+            display: block
+            color: $primary-text
+
+            &:hover
+                background: $line-color
+                color: #000
+                text-decoration: none
+
+        button
+            display: block
+            margin: 10px auto 15px
+            background: $primary-text
+            color: #fff
+            border: none
+            width: 100%
+            padding: 16px
+
+            &:hover
+                background: #000
+
+@media screen and (min-width: 600px)
+    .cart-container
+        table
+            .product-info
+                a
+                    &:hover
+                        .product-name
+                        color: $second-text
+                        text-decoration: none
+
+            .product-name
+                display: block
+                margin-top: 10px
+                color: $primary-text
+
+            td
+                padding-top: 20px
+                padding-bottom: 20px
+
+            tr
+                border-bottom: 1px solid $line-color
+
+                &:last-child
+                    border-bottom: none
+
+@media screen and (min-width: 992px)
+    .cart-container
+        table
+            .product-name
+                display: inline
+
+            img
+                width: 150px
+                margin-right: 25px
+
+            td
+                width: auto
+
+
+            .cart-info
+                width: 50%
+                padding-left: 0
+
+                div
+                    display: inline-block
+
+                .price
+                    float: left
+                    margin-top: 22px
+
+                .quantity-control
+                    max-width: 200px
+                    border: 1px solid $line-color
+
+                    .error
+                        top: 50%
+                        transform: translate3d(-50%, 25px, 0)
+
+                .remove-control
+                    float: right
+                    margin-top: 22px
+                    width: 25px
+                    height: 25px
+                    text-indent: -999px
+                    background-color: $primary-text
+                    -webkit-mask-image: url(/demo/close.svg)
+                    mask-image: url(/demo/close.svg)
+                    -webkit-mask-repeat: no-repeat
+                    -webkit-mask-position: 50% 50%
+                    -webkit-mask-size: 15px 15px
+                    cursor: pointer
+
+                    &:hover
+                        background-color: $second-text
+        .cart-footer
+            width: 50%
+            margin-left: 50%
+
+            a,
+            form
+                display: inline-block
+                width: calc(50% - 10px)
+
+            a
+                margin-right: 15px

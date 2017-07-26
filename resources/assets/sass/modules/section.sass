@@ -1,0 +1,85 @@
+.section
+    clear: both
+    margin: 50px auto
+    text-align: center
+
+    &:first-child
+
+    .title
+        letter-spacing: 2px
+        font-weight: 900
+        font-size: 22px
+        text-transform: uppercase
+        margin: 20px auto
+
+
+    .category-grid
+        width: 100%
+        padding-bottom: 100%
+        margin-bottom: 20px
+        position: relative
+        background: #D4D4D4
+
+        .text
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate3d(-50%, -50%, 0)
+            text-transform: uppercase
+            font-weight: 900
+            font-size: 26px
+            color: #fff
+            border: 4px solid #fff
+            padding: 5px 20px
+
+@media screen and (min-width: 560px)
+    .category-section
+        .category-grid
+            float: left
+            width: calc(50% - 10px)
+            padding-bottom: calc(50% - 10px)
+            display: inline-block
+
+        a
+            &:nth-child(2n+1)
+                .category-grid
+                    margin-left: 20px
+
+    .product-grid
+        text-align: center
+        margin-bottom: 20px
+
+        img
+            max-width: 80%
+            margin: auto
+            margin-bottom: 15px
+
+        .name
+            color: #c1c1c1
+            font-size: 16px
+            margin-bottom: 15px
+
+        .price
+            color: #000
+            font-weight: 900
+            letter-spacing: 2px
+            font-size: 18px
+
+@media screen and (min-width: 1200px)
+    .category-section
+        .category-grid
+            float: left
+            width: calc(25% - 20px)
+            padding-bottom: calc(25% - 20px)
+
+        a
+            .category-grid
+                margin-right: 20px
+
+            &:nth-child(2n+1)
+                .category-grid
+                    margin-left: 0
+
+            &:last-child
+                .category-grid
+                    margin-right: 0

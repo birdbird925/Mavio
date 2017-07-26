@@ -1,0 +1,10 @@
+require('./bootstrap');
+require('./admin/vendor/jquery.dataTables.min');
+require('./admin/vendor/light-bootstrap-dashboard');
+require('./admin/vendor/sweetalert.min');
+require('./admin/vendor/tagsinput');
+require('./admin/vendor/notification');
+require('./admin/vendor/chart');
+require('./admin/dashboard');
+require('./admin/product');
+require('./admin/order');

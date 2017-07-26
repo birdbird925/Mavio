@@ -1,0 +1,158 @@
+.shop-filter
+    display: inline-block
+    font-size: 11px
+    line-height: 16px
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+    letter-spacing: 1px
+    list-style: none
+    padding-left: 0
+    text-transform: uppercase
+    color: $second-text
+    position: relative
+    margin: 25px auto 20px
+
+    a
+        color: $primary-text
+
+        &:hover
+            color: #000
+            text-decoration: none
+
+    li
+        display: inline-block
+        margin-right: 30px
+        cursor: pointer
+
+    li.title
+        cursor: normal
+
+    .active
+        color: #85CCB4
+
+    .dropdown
+        span
+            display: inline-block
+            padding-right: 25px
+            background:
+                image: url(/demo/arrow-dropdown.svg)
+                repeat: no-repeat
+                size: 20px
+                position: right
+
+        .menu
+            position: absolute
+            width: auto
+            white-space: nowrap
+            top: 15px
+            left: -15px
+            background: #fff
+            z-index: 999
+            max-height: 0
+            overflow: hidden
+            padding: 0 15px
+            transition: max-height 666ms cubic-bezier(.666,0,.333,1)
+            -webkit-transition: max-height 666ms cubic-bezier(.666,0,.333,1)
+
+            label
+                background-image: none
+
+            li
+                display: block
+                margin-bottom: 5px
+
+                &:first-child
+                    margin-top: 15px
+
+                &:last-child
+                    margin-bottom: 15px
+
+                &:hover
+                    color: #000
+
+                input[type=radio],
+                input[type=checkbox]
+                    margin-right: 5px
+                    -webkit-appearance: none
+                    -moz-appearance: none
+                    appearance: none
+                    width: 12px
+                    height: 12px
+                    border: 1px solid #919091
+                    background: #fff
+                    vertical-align: text-bottom
+
+                    &:focus
+                        outline: none
+
+                    &:checked
+                        background:
+                            image: url(/demo/close.svg)
+                            size: 14px
+                            position: center
+                            repeat: no-repeat
+                        border-color: #000
+
+                    &:checked + label
+                        color: #000
+
+        &:hover
+            overflow: visible
+
+            span
+                color: #000
+                background:
+                    image: url(/demo/arrow-dropdown-hover.svg)
+
+            .menu
+                max-height: 500px
+
+
+.shop-filter-right
+    float: right
+
+    li
+        margin-right: 0
+        margin-left: 15px
+
+    .dropdown
+        text-align: right
+
+        .menu
+            left: auto
+            right: 0
+
+
+.filter-menu
+    position: absolute
+    max-width: 500px
+    max-height: 0px
+    top: 30px
+    left: 15px
+    overflow: hidden
+
+    li
+        position: absolute
+
+.filter-menu.active
+    max-height: 500px
+    overflow: visible
+    margin-top: 15px
+
+    li
+        position: relative
+
+@media (min-width: 921px)
+    .shop-filter
+        margin-bottom: 20px
+
+    .filter-menu
+        left: auto
+        top: 5px
+        max-width: 0
+        max-height: 15px
+
+    .filter-menu.active
+        max-height: 15px
+        max-width: 500px
+        margin-top: 20px

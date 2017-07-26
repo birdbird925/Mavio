@@ -1,0 +1,116 @@
+footer
+    background: #FBFBFB
+    margin-top: 50px
+    padding: 50px
+    padding-bottom: 20px
+    text-align: center
+
+    .subscribe
+        label
+            text-transform: uppercase
+            font-size: 12px
+            letter-spacing: 2px
+            display: block
+            margin: auto
+            margin-bottom: 10px
+            color: #000
+
+        input
+            background: transparent
+            border: none
+            text-align: center
+            width: 100%
+            display: block
+            margin-bottom: 5px
+
+            &:focus
+                outline: none
+
+    .footer-menu
+        list-style: none
+        border-top: 2px solid #000
+        display: inline-block
+        margin: auto
+        padding: 0 25px
+        padding-top: 40px
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: 10px
+        font-weight: 600
+
+        li
+            float: left
+            // display: inline-block
+
+            a
+                color: #9E9E9E
+                padding: 0 20px
+
+                &:hover
+                    color: #000
+                    text-decoration: none
+
+            &:nth-child(2n)
+                float: right
+
+            &:nth-child(2n+1)
+                clear: left
+
+            &:last-child
+                a
+                    border-right: none
+
+    .social-menu
+        margin-top: 25px
+        list-style: none
+        padding: 0
+
+        li
+            cursor: pointer
+            display: inline-block
+            margin-right: 15px
+            width: 20px
+            height: 20px
+            text-indent: -9999px
+            overflow: hidden
+            background:
+                color: #9E9E9E
+            -webkit-mask:
+                repeat: no-repeat
+                position: 50% 50%
+                size: 15px 15px
+
+            &:hover
+                background-color: #000
+
+            &:last-child
+                margin-right: 0
+
+        .facebook
+            mask-image: url(/demo/facebook.svg)
+
+        .google
+            mask-image: url(/demo/google.svg)
+
+        .twitter
+            mask-image: url(/demo/twitter.svg)
+
+        .instagram
+            mask-image: url(/demo/instagram.svg)
+
+@media (min-width: 769px)
+    footer
+        .footer-menu
+            li
+                display: inline
+                float: none
+
+                a
+                    border-right: 1px solid #9E9E9E
+
+                &:nth-child(2n)
+                    float: none
+
+                &:last-child
+                    a
+                        border-right: none

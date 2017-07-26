@@ -1,0 +1,95 @@
+.product-grid
+    text-align: center
+    margin-bottom: 40px
+    cursor: pointer
+
+    &:hover
+        .product-image
+            .quick-shop,
+            .like
+                opacity: 1
+
+    .product-image
+        width: 100%
+        padding-bottom: 120%
+        position: relative
+        background:
+            repeat: no-repeat
+            size: cover
+            position: center
+
+        .quick-shop
+            text-align: center
+            color: rgba(0,0,0,0.8)
+            background: rgba(255,255,255, 0.8)
+            text-transform: uppercase
+            letter-spacing: 1px
+            padding: 10px
+            position: absolute
+            top: 50%
+            left: 50%
+            font-size: 10px
+            transform: translate3d(-50%, -50%, 0)
+            opacity: 0
+            transition: background-color 333ms cubic-bezier(.666,0,.333,1), color 333ms cubic-bezier(.666,0,.333,1), opacity 555ms cubic-bezier(.666,0,.333,1)
+            -webkit-transition: background-color 333ms cubic-bezier(.666,0,.333,1), color 333ms cubic-bezier(.666,0,.333,1), opacity 555ms cubic-bezier(.666,0,.333,1)
+
+            &:hover
+                background-color: rgba(255,255,255,1)
+                color: #000
+
+    .product-name
+        width: 80%
+        font-size: 12px
+        font-weight: 400
+        letter-spacing: 2px
+        margin: 20px auto 10px
+        color: #000
+
+    .product-price
+        font-weight: 600
+        font-size: 12px
+        color: #000
+
+        del
+            margin-left: 20px
+            font-size: 10px
+
+
+@media (min-width: 768px)
+    .product-grid
+        margin-bottom: 30px
+
+        .product-image
+            padding-bottom: 150%
+
+            .quick-shop
+                font-size: 16px
+
+        .product-name
+            width: 90%
+            font-size: 14px
+
+        .product-price
+            font-size: 16px
+
+            del
+                font-size: 14px
+
+    .col-sm-8
+        .product-image
+            padding-bottom: 70%
+
+
+@media (min-width: 998px)
+    .col-sm-8
+        .product-image
+            padding-bottom: 71%
+
+        .product-name
+            width: 100%
+
+@media (min-width: 1200px)
+    .col-sm-8
+        .product-image
+            padding-bottom: 72%

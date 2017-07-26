@@ -1,0 +1,185 @@
+.product-container
+    padding-top: 50px
+
+    .main-image
+        max-width: 100%
+
+    .thumb
+        margin-top: 10px
+        max-width: 20%
+
+    .product-info
+        color: $primary-text
+
+        hr
+            margin: 30px auto 15px
+
+        .vendor
+            text-transform: uppercase
+            color: $third-text
+            font-size: 12px
+            font-weight: 900
+            letter-spacing: 2px
+            margin-bottom: 10px
+
+        .title
+            font-family: 'Roboto'
+            font-size: 18px
+            letter-spacing: 2px
+            font-weight: 500
+            margin: 10px auto 5px
+
+        .price
+            margin-bottom: 25px
+            font-size: 16px
+            letter-spacing: 2px
+            font-weight: 900
+
+            del
+                font-size: 12px
+                margin-left: 10px
+
+        .option-wrapper
+            margin: 40px auto 20px
+
+            select
+                letter-spacing: 2px
+                text-transform: uppercase
+                width: 50%
+                padding: 6px 20px 8px 10px
+                background: $main-bg
+                border: 1px solid $line-color
+                border-radius: 0px
+                appearance: none
+                -webkit-appearance: none
+                background:
+                    image: url(/demo/arrow-down.svg)
+                    position: center right
+                    size: 20px
+                    repeat: no-repeat
+
+                &:focus
+                    outline: none
+
+        .add-cart
+            width: 50%
+            padding: 10px 25px
+            background: $primary-text
+            color: $main-bg
+            text-transform: uppercase
+            border: none
+            font-size: 12px
+            font-weight: 900
+            letter-spacing: 2px
+
+            &:hover
+                background: #000
+
+            &:focus
+                outline: none
+
+        .out-of-stock
+            font-weight: 900
+            color: $third-text
+            font-size: 20px
+            letter-spacing: 2px
+
+        .status
+            margin-top: 10px
+            letter-spacing: 2px
+            color: rgb(41, 175, 11)
+
+        .status.error
+            color: red
+
+        .heading
+            text-transform: uppercase
+            color: $primary-text
+            font-weight: 900
+            margin-bottom: 12px
+            letter-spacing: 2px
+            font-size: 12px
+
+        .description
+            color: $second-text
+            font-size: 12px
+            margin-bottom: 12px
+
+        .social-share
+            margin-bottom: 10px
+            padding-left: 0
+            list-style: none
+
+            li
+                text-indent: -9999px
+                display: inline-block
+                width: 20px
+                height: 20px
+                background: pink
+                margin-right: 10px
+                background:
+                    color: #9E9E9E
+                    size: cover
+                -webkit-mask-repeat: no-repeat
+                -webkit-mask-position: 50% 50%
+                -webkit-mask-size: 15px 15px
+                cursor: pointer
+
+                &:hover
+                    background:
+                        color: $primary-text
+
+            .facebook
+                -webkit-mask-image: url(/demo/facebook.svg)
+                mask-image: url(/demo/facebook.svg)
+
+            .twitter
+                -webkit-mask-image: url(/demo/twitter.svg)
+                mask-image: url(/demo/twitter.svg)
+
+            .google
+                -webkit-mask-image: url(/demo/google.svg)
+                mask-image: url(/demo/google.svg)
+
+@media screen and (min-width: 768px)
+    .product-container
+        .product-info
+            hr:first-child,
+            hr:last-child
+                display: none
+
+
+@media screen and (min-width: 992px)
+    .product-container
+        .product-info
+            hr
+                margin: 30px auto
+
+            .vendor
+                font-weight: 16px
+                margin-bottom: 15px
+
+            .title
+                font-size: 22px
+                margin-bottom: 10px
+
+            .price
+                font-size: 20px
+
+                del
+                    font-size: 14px
+                    margin-left: 20px
+
+            .option-wrapper
+                margin: 50px auto 25px
+
+                select
+                    width: 33%
+
+            .heading,
+            .description
+                font-size: 14px
+
+            .social-share
+                margin-bottom: 0
+                margin: 20px auto
